@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Story Idea Generator</title>
+	<style>
+		.HG {
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
+		}
+		.Hbody {
+		display: flex;
+		flex: 1;
+		flex-wrap: wrap;
+		justify-content: center;
+		font-family: 'Courier New', Courier, monospace;
+		background: #677077;
+		}
+		h3 {
+		margin-top: 10%
+		}
+		.content {
+		flex: 1;
+		background: #677077;
+		}
+		.disBox {
+		height: 180px;
+		width: 300px;
+		background: #b5b5b7;
+		margin: 30px auto 0;
+		display: block;
+		font-size: 30px;
+		text-align: center;
+		text-justify: center;
+		border-radius: 6px;
+		color: #black;
+		transition: 1s linear;
+		border: inset;
+		}
+		.button {
+		background: #f2b632;
+		border: 0;
+		color: #000000;
+		font-size: 16px;
+		padding: 1em 2em;
+		margin: 0 auto 60px;
+		display: block;
+		text-align: center;
+		border-radius: 6px;
+		font-weight: bold;
+		border: outset;
+		}
+		.padding {
+		height: 50px;
+		}
+	
+	</style>
+</head>
+<body class='HG'>
+	<div class='Hbody'>
+		<div class='content'>
+			<h3><center>Random Genres of Literature</center></h3>
+			<div class='disBox' id='display'></div>
+			<div class='padding'></div><button class='button' onclick='generate()'>Generate</button>
+		</div>
+	</div>
+	<script>
+		var subgenre = [
+			'comedic',
+			'epic',
+			'distopian',
+			'surreal',
+			'magical',
+			'historical',
+			'cozy',
+			'supernatural',
+			'serial',
+			'slasher',
+			'survival',
+			'paranormal',
+			'monster',
+			'satirical',
+			'post-apocolyptic',
+			'gothic',
+			'contemporary',
+			'time-traveling',
+			'multicultural',
+			'romantic',
+			'dark',
+			'realistic',
+			'psychological',
+			'urban',
+			'medical',
+			'hard-boiled',
+			'techno',
+			'alternate-history',
+			'speculative',
+			
+			
+			]
+			
+			var subSubgenre = [
+			'space',
+			'political',
+			'colonial',
+			'action',
+			'steampunk',
+			'cyberpunk',
+			'chic',
+			'erotic',
+			'spy',
+			'crime',
+			'zombie',
+			'vampire',
+			'werewolf',
+			'occult',
+			'Victorian',
+			'futuristic',
+			'science',
+			'medieval',
+			'1950\'s',
+			'samurai',
+			]
+
+			var genre = [
+			'mystery',
+			'noir',
+			'thriller',
+			'romance',
+			'fantasy',
+			'horror',
+			'drama',
+			'comedy',
+			'western',
+			'sci-fi',
+			'suspense'
+			]
+
+			function generate() {
+			var randomNumber3 = Math.floor(Math.random() * (subSubgenre.length));
+			var randomNumber2 = Math.floor(Math.random() * (subgenre.length));
+			var randomNumber1 = Math.floor(Math.random() * (genre.length));
+			document.getElementById('display').innerHTML = subgenre[randomNumber2] + ' ' + subSubgenre[randomNumber3] + ' ' + genre[randomNumber1];
+			}
+	</script>
+</body>
+</html>
